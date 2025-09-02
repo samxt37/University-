@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartes et Localisation - UMMTO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="maps.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="UMMTO Logo">
+                <h1>Cartes et Localisation</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../departments/">Départements</a></li>
+                    <li><a href="../virtual-tour/">Visite 3D</a></li>
+                    <li><a href="#campus-map">Campus</a></li>
+                    <li><a href="#transport">Transport</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="maps-hero">
+            <div class="container">
+                <h1>Localisation UMMTO</h1>
+                <p>Découvrez nos campus et installations à Tizi-Ouzou</p>
+            </div>
+        </section>
+
+        <section id="campus-map" class="campus-map-section">
+            <div class="container">
+                <h2>Carte du Campus Principal</h2>
+                <div class="map-container">
+                    <div id="campus-map-container"></div>
+                </div>
+
+                <div class="map-legend">
+                    <h3>Légende</h3>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #e74c3c;"></div>
+                            <span>Bâtiments Administratifs</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #3498db;"></div>
+                            <span>Facultés</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #2ecc71;"></div>
+                            <span>Installations Sportives</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #f39c12;"></div>
+                            <span>Résidences Étudiantes</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #9b59b6;"></div>
+                            <span>Services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="transport" class="transport-section">
+            <div class="container">
+                <h2>Accès et Transport</h2>
+                <div class="transport-grid">
+                    <div class="transport-card">
+                        <div class="transport-icon">🚌</div>
+                        <h3>Transport en Commun</h3>
+                        <ul>
+                            <li>Lignes de bus: 10, 15, 20</li>
+                            <li>Arrêt: Université Centre</li>
+                            <li>Fréquence: Toutes les 15 minutes</li>
+                        </ul>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="transport-icon">🚗</div>
+                        <h3>Parking</h3>
+                        <ul>
+                            <li>Parking principal: 500 places</li>
+                            <li>Parking facultés: 300 places</li>
+                            <li>Tarifs: Gratuit pour étudiants</li>
+                        </ul>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="transport-icon">✈️</div>
+                        <h3>Aéroport</h3>
+                        <ul>
+                            <li>Aéroport Houari Boumediene: 25km</li>
+                            <li>Navette aéroport: Service régulier</li>
+                            <li>Taxi: 30-45 minutes</li>
+                        </ul>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="transport-icon">🚇</div>
+                        <h3>Métro Léger</h3>
+                        <ul>
+                            <li>Station: Cité Universitaire</li>
+                            <li>Ligne 1: Centre-ville ↔ Campus</li>
+                            <li>Fréquence: Toutes les 10 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="locations-section">
+            <div class="container">
+                <h2>Nos Emplacements</h2>
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <h3>Campus Principal Hasnaoua</h3>
+                        <p>Adresse: Route de Hasnaoua, Tizi-Ouzou</p>
+                        <p>Téléphone: +213 26 11 56 51</p>
+                        <div class="location-features">
+                            <span>🏛️ Administration</span>
+                            <span>📚 Bibliothèque</span>
+                            <span>🏢 9 Facultés</span>
+                            <span>⚕️ Services Médicaux</span>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Centre de Recherche</h3>
+                        <p>Adresse: Zone Industrielle, Tizi-Ouzou</p>
+                        <p>Téléphone: +213 26 11 56 52</p>
+                        <div class="location-features">
+                            <span>🔬 Laboratoires</span>
+                            <span>📊 Centres de calcul</span>
+                            <span>🎓 Incubateur</span>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Complexe Sportif</h3>
+                        <p>Adresse: Boulevard de l'Indépendance, Tizi-Ouzou</p>
+                        <p>Téléphone: +213 26 11 56 53</p>
+                        <div class="location-features">
+                            <span>🏃 Stade</span>
+                            <span>🏊 Piscine</span>
+                            <span>🏓 Gymnase</span>
+                            <span>🎾 Courts de tennis</span>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Résidences Universitaires</h3>
+                        <p>Adresse: Cité Universitaire, Tizi-Ouzou</p>
+                        <p>Téléphone: +213 26 11 56 54</p>
+                        <div class="location-features">
+                            <span>🏠 2000 chambres</span>
+                            <span>🍽️ Restauration</span>
+                            <span>📖 Espaces d'étude</span>
+                            <span>🛡️ Sécurité 24h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="directions-section">
+            <div class="container">
+                <h2>Itinéraires</h2>
+                <div class="directions-grid">
+                    <div class="direction-card">
+                        <h3>Depuis Alger</h3>
+                        <ul>
+                            <li>🚗 Autoroute A1: 2h30</li>
+                            <li>🚌 Bus: Gare Routière Alger → Tizi-Ouzou</li>
+                            <li>🚆 Train: Gare d'Alger → Gare de Tizi-Ouzou</li>
+                        </ul>
+                    </div>
+
+                    <div class="direction-card">
+                        <h3>Depuis Béjaïa</h3>
+                        <ul>
+                            <li>🚗 Route nationale: 1h30</li>
+                            <li>🚌 Bus: Gare Routière Béjaïa → Tizi-Ouzou</li>
+                            <li>🚗 Taxi: Service disponible</li>
+                        </ul>
+                    </div>
+
+                    <div class="direction-card">
+                        <h3>Depuis Bouira</h3>
+                        <ul>
+                            <li>🚗 Route nationale: 45 minutes</li>
+                            <li>🚌 Bus: Gare Routière Bouira → Tizi-Ouzou</li>
+                            <li>🚗 Transport local: Fréquent</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact et Informations</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Service Orientation</h3>
+                        <p>Horaires: 8h00 - 17h00</p>
+                        <p>Email: orientation@ummto.dz</p>
+                        <p>Tél: +213 26 11 56 55</p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Urgences</h3>
+                        <p>Service médical d'urgence</p>
+                        <p>Tél: +213 26 11 56 56</p>
+                        <p>Disponible 24h/24</p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Sécurité</h3>
+                        <p>Service de sécurité du campus</p>
+                        <p>Tél: +213 26 11 56 57</p>
+                        <p>Disponible 24h/24</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 UMMTO - Cartes et Localisation. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="maps.js"></script>
+</body>
+</html>
