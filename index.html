@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Université Mouloud Mammeri de Tizi-Ouzou</title>
+    <meta name="description" content="Site officiel de l'Université Mouloud Mammeri de Tizi-Ouzou avec portail étudiant et calendrier des événements">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Modern Navigation -->
+    <nav class="modern-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/logo.svg" alt="UMMTO Logo" class="nav-logo">
+                <div class="brand-text">
+                    <span class="brand-main">UMMTO</span>
+                    <span class="brand-sub">Université Mouloud Mammeri</span>
+                </div>
+            </div>
+
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Accueil</a>
+                <a href="pages/university.html" class="nav-link">Université</a>
+                <a href="departments/" class="nav-link">Départements</a>
+                <a href="virtual-tour/" class="nav-link">Visite 3D</a>
+                <a href="pages/research.html" class="nav-link">Recherche</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Portails ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="student-portal/" class="dropdown-item">Portail Étudiant</a>
+                        <a href="professor-portal/" class="dropdown-item">Portail Professeur</a>
+                    </div>
+                </div>
+                <a href="forum/" class="nav-link">Forum</a>
+                <a href="calendar/" class="nav-link">Calendrier</a>
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="search-toggle" id="search-toggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="theme-toggle" id="theme-toggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Modern Search Bar -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" placeholder="Rechercher sur le site..." id="search-input" class="search-input">
+                <button class="search-close" id="search-close">×</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Modern Hero Section -->
+        <section id="home" class="modern-hero">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-main">Excellence</span>
+                        <span class="title-accent">Académique</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Découvrez l'Université Mouloud Mammeri de Tizi-Ouzou,
+                        où l'innovation rencontre la tradition
+                    </p>
+                    <div class="hero-actions">
+                        <a href="departments/" class="btn-primary-modern">
+                            Explorer les Départements
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7"></path>
+                                <path d="M7 7h10v10"></path>
+                            </svg>
+                        </a>
+                        <a href="virtual-tour/" class="btn-secondary-modern">
+                            Visite Virtuelle 3D
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-card-modern">
+                        <div class="stat-number">15,000+</div>
+                        <div class="stat-label">Étudiants</div>
+                    </div>
+                    <div class="stat-card-modern">
+                        <div class="stat-number">35+</div>
+                        <div class="stat-label">Spécialités</div>
+                    </div>
+                    <div class="stat-card-modern">
+                        <div class="stat-number">9</div>
+                        <div class="stat-label">Facultés</div>
+                    </div>
+                    <div class="stat-card-modern">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Années d'Excellence</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Découvrez UMMTO</h2>
+                    <p>Une université d'excellence au service de l'avenir</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3>Formation d'Excellence</h3>
+                        <p>Programmes académiques de qualité supérieure adaptés aux défis du 21ème siècle</p>
+                        <a href="departments/" class="feature-link">Voir les départements →</a>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"></path>
+                                <circle cx="12" cy="12" r="9"></circle>
+                            </svg>
+                        </div>
+                        <h3>Recherche Innovante</h3>
+                        <p>Laboratoires de pointe et équipes de recherche reconnues internationalement</p>
+                        <a href="pages/research.html" class="feature-link">Découvrir la recherche →</a>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Communauté Dynamique</h3>
+                        <p>Une communauté étudiante active et des activités culturelles riches</p>
+                        <a href="forum/" class="feature-link">Rejoindre la communauté →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern News Section -->
+        <section class="news-section-modern">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Actualités & Événements</h2>
+                    <p>Restez informé des dernières nouvelles de l'université</p>
+                </div>
+
+                <div class="news-grid-modern">
+                    <div class="news-main">
+                        <article class="news-card-main">
+                            <div class="news-image">
+                                <img src="images/news-main.jpg" alt="Actualité principale">
+                                <div class="news-category">Événement</div>
+                            </div>
+                            <div class="news-content">
+                                <h3>Journée Portes Ouvertes 2025</h3>
+                                <p class="news-meta">
+                                    <span class="date">15 Janvier 2025</span>
+                                    <span class="author">Service Communication</span>
+                                </p>
+                                <p>Découvrez notre campus lors de la journée portes ouvertes. Rencontrez nos enseignants, visitez nos installations et assistez à des conférences passionnantes.</p>
+                                <a href="#" class="news-link">Lire la suite →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="news-sidebar">
+                        <article class="news-card-small">
+                            <div class="news-image-small">
+                                <img src="images/news-1.jpg" alt="Actualité 1">
+                            </div>
+                            <div class="news-content-small">
+                                <h4>Résultats d'admission Master 2025</h4>
+                                <p class="news-date">12 Janvier 2025</p>
+                                <a href="#" class="news-link-small">Voir les résultats →</a>
+                            </div>
+                        </article>
+
+                        <article class="news-card-small">
+                            <div class="news-image-small">
+                                <img src="images/news-2.jpg" alt="Actualité 2">
+                            </div>
+                            <div class="news-content-small">
+                                <h4>Conférence internationale de physique</h4>
+                                <p class="news-date">10 Janvier 2025</p>
+                                <a href="#" class="news-link-small">En savoir plus →</a>
+                            </div>
+                        </article>
+
+                        <article class="news-card-small">
+                            <div class="news-image-small">
+                                <img src="images/news-3.jpg" alt="Actualité 3">
+                            </div>
+                            <div class="news-content-small">
+                                <h4>Nouveau laboratoire de recherche</h4>
+                                <p class="news-date">8 Janvier 2025</p>
+                                <a href="#" class="news-link-small">Découvrir →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Prêt à commencer votre aventure académique ?</h2>
+                    <p>Rejoignez la communauté UMMTO et faites partie d'une université d'excellence</p>
+                    <div class="cta-buttons">
+                        <a href="student-portal/" class="btn-primary-modern">
+                            Portail Étudiant
+                        </a>
+                        <a href="professor-portal/" class="btn-secondary-modern">
+                            Espace Professeur
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo.svg" alt="UMMTO Logo" class="footer-logo">
+                    <div class="footer-brand-text">
+                        <h3>Université Mouloud Mammeri</h3>
+                        <p>Excellence • Innovation • Leadership</p>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="pages/university.html">À propos</a></li>
+                            <li><a href="departments/">Départements</a></li>
+                            <li><a href="pages/research.html">Recherche</a></li>
+                            <li><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Portails</h4>
+                        <ul>
+                            <li><a href="student-portal/">Étudiants</a></li>
+                            <li><a href="professor-portal/">Professeurs</a></li>
+                            <li><a href="forum/">Forum</a></li>
+                            <li><a href="calendar/">Calendrier</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><span>📍 Campus Hasnaoua</span></li>
+                            <li><span>📞 +213 26 11 56 51</span></li>
+                            <li><span>✉️ univ_tizi@ummto.dz</span></li>
+                            <li><span>🌐 www.ummto.dz</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Suivez-nous</h4>
+                        <div class="social-links-modern">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.017 0C8.396 0 7.949.014 6.616.072 5.293.13 4.428.309 3.643.546c-.809.238-1.495.554-2.172 1.228C.794 2.448.478 3.135.24 3.944.003 4.729-.175 5.594.072 6.917c.058 1.333.072 1.78.072 5.401s-.014 4.068-.072 5.401c-.247 1.323-.426 2.188-.663 2.973-.238.809-.554 1.495-1.228 2.172C-.448 23.206-.135 23.892.074 24.7c.237.809.554 1.495 1.228 2.172.677.677 1.363.993 2.172 1.228.785.237 1.65.416 2.973.663 1.333.058 1.78.072 5.401.072s4.068-.014 5.401-.072c1.323-.247 2.188-.426 2.973-.663.809-.238 1.495-.554 2.172-1.228.677-.677.993-1.363 1.228-2.172.237-.809.416-1.65.663-2.973.058-1.333.072-1.78.072-5.401s-.014-4.068-.072-5.401c-.247-1.323-.426-2.188-.663-2.973-.238-.809-.554-1.495-1.228-2.172C23.206.794 22.892.478 22.083.24c-.809-.237-1.65-.416-2.973-.663C17.777.014 17.33 0 13.709 0c-3.621 0-4.068.014-5.401.072C6.975.13 6.11.309 5.325.546c-.809.238-1.495.554-2.172 1.228C2.448.794 2.135.478 1.926.24.717.003.852-.175-.471-.072c-1.333-.058-1.78-.072-5.401-.072zM12.017 5.838c-3.403 0-6.163 2.76-6.163 6.163s2.76 6.163 6.163 6.163 6.163-2.76 6.163-6.163-2.76-6.163-6.163-6.163zm0 10.169c-2.204 0-3.987-1.783-3.987-3.987s1.783-3.987 3.987-3.987 3.987 1.783 3.987 3.987-1.783 3.987-3.987 3.987zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Université Mouloud Mammeri de Tizi-Ouzou. Tous droits réservés.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Politique de confidentialité</a>
+                        <a href="#">Conditions d'utilisation</a>
+                        <a href="#">Accessibilité</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/modern.js"></script>
+</body>
+</html>

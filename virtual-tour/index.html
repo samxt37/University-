@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visite Virtuelle 3D - UMMTO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="virtual-tour.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="UMMTO Logo">
+                <h1>Visite Virtuelle 3D</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../departments/">Départements</a></li>
+                    <li><a href="#controls">Contrôles</a></li>
+                    <li><a href="#locations">Lieux</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="tour-section">
+            <div class="tour-container">
+                <div id="tour-canvas"></div>
+
+                <!-- Control Panel -->
+                <div class="control-panel">
+                    <h3>Navigation</h3>
+                    <div class="control-buttons">
+                        <button id="reset-view" class="control-btn">Vue d'ensemble</button>
+                        <button id="top-view" class="control-btn">Vue aérienne</button>
+                        <button id="ground-view" class="control-btn">Vue au sol</button>
+                    </div>
+
+                    <h3>Lieux d'intérêt</h3>
+                    <div class="location-buttons">
+                        <button class="location-btn" data-location="entrance">Entrée principale</button>
+                        <button class="location-btn" data-location="library">Bibliothèque</button>
+                        <button class="location-btn" data-location="sciences">Faculté des Sciences</button>
+                        <button class="location-btn" data-location="engineering">Faculté de Génie</button>
+                        <button class="location-btn" data-location="medicine">Faculté de Médecine</button>
+                        <button class="location-btn" data-location="sports">Complexe sportif</button>
+                        <button class="location-btn" data-location="dormitory">Résidences étudiantes</button>
+                    </div>
+                </div>
+
+                <!-- Info Panel -->
+                <div class="info-panel">
+                    <div class="info-header">
+                        <h3 id="location-title">Vue d'ensemble du campus</h3>
+                        <button id="close-info" class="close-btn">×</button>
+                    </div>
+                    <div class="info-content">
+                        <div id="location-description">
+                            <p>Découvrez le campus de l'Université Mouloud Mammeri de Tizi-Ouzou à travers cette visite virtuelle en 3D.</p>
+                            <p>Utilisez la souris pour naviguer et explorez les différents bâtiments et installations.</p>
+                        </div>
+                        <div id="location-details" style="display: none;">
+                            <!-- Dynamic content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading Screen -->
+                <div id="loading-screen">
+                    <div class="loading-content">
+                        <div class="loading-spinner"></div>
+                        <h3>Chargement de la visite virtuelle...</h3>
+                        <p>Préparation du campus 3D</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instructions Section -->
+        <section class="instructions-section">
+            <div class="container">
+                <h2>Comment utiliser la visite virtuelle</h2>
+                <div class="instructions-grid">
+                    <div class="instruction-item">
+                        <div class="instruction-icon">🖱️</div>
+                        <h4>Navigation souris</h4>
+                        <p>Cliquez et faites glisser pour tourner autour du campus. Utilisez la molette pour zoomer.</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">🎯</div>
+                        <h4>Points d'intérêt</h4>
+                        <p>Cliquez sur les boutons de lieux pour vous téléporter automatiquement à ces emplacements.</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">📍</div>
+                        <h4>Exploration</h4>
+                        <p>Découvrez les bâtiments, les espaces verts et les installations sportives du campus.</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">ℹ️</div>
+                        <h4>Informations</h4>
+                        <p>Cliquez sur les bâtiments pour obtenir des informations détaillées sur chaque lieu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 UMMTO - Visite Virtuelle 3D. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="virtual-tour.js"></script>
+</body>
+</html>

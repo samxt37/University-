@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail Étudiant - UMMTO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="UMMTO Logo">
+                <h1>Portail Étudiant</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="#dashboard">Tableau de bord</a></li>
+                    <li><a href="#courses">Cours</a></li>
+                    <li><a href="#grades">Notes</a></li>
+                    <li><a href="#resources">Ressources</a></li>
+                    <li><a href="#logout">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="login" class="login-section">
+                <h2>Connexion</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Se connecter</button>
+                </form>
+                <p>Pas encore inscrit? <a href="#register">S'inscrire</a></p>
+            </section>
+
+            <section id="dashboard" class="dashboard-section hidden">
+                <h2>Tableau de bord</h2>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3>Mes cours</h3>
+                        <p>Accédez à vos cours en ligne</p>
+                        <a href="#courses" class="btn-secondary">Voir les cours</a>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Mes notes</h3>
+                        <p>Consultez vos résultats</p>
+                        <a href="#grades" class="btn-secondary">Voir les notes</a>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Ressources académiques</h3>
+                        <p>Documents, bibliothèques, etc.</p>
+                        <a href="#resources" class="btn-secondary">Explorer</a>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Emploi du temps</h3>
+                        <p>Votre planning hebdomadaire</p>
+                        <a href="#schedule" class="btn-secondary">Voir le planning</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="courses" class="courses-section hidden">
+                <h2>Mes cours</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <h3>Mathématiques</h3>
+                        <p>Professeur: Dr. Dupont</p>
+                        <a href="#" class="btn-primary">Accéder au cours</a>
+                    </div>
+                    <div class="course-card">
+                        <h3>Physique</h3>
+                        <p>Professeur: Dr. Martin</p>
+                        <a href="#" class="btn-primary">Accéder au cours</a>
+                    </div>
+                    <!-- More courses -->
+                </div>
+            </section>
+
+            <section id="grades" class="grades-section hidden">
+                <h2>Mes notes</h2>
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Matière</th>
+                            <th>Note</th>
+                            <th>Coefficient</th>
+                            <th>Moyenne</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mathématiques</td>
+                            <td>15/20</td>
+                            <td>3</td>
+                            <td>15.0</td>
+                        </tr>
+                        <tr>
+                            <td>Physique</td>
+                            <td>14/20</td>
+                            <td>2</td>
+                            <td>14.0</td>
+                        </tr>
+                        <!-- More grades -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="resources" class="resources-section hidden">
+                <h2>Ressources académiques</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>Bibliothèque numérique</h3>
+                        <p>Accès aux livres et articles</p>
+                        <a href="#" class="btn-primary">Explorer</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Archives des cours</h3>
+                        <p>Cours des années précédentes</p>
+                        <a href="#" class="btn-primary">Télécharger</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Forum étudiant</h3>
+                        <p>Échangez avec vos camarades</p>
+                        <a href="#" class="btn-primary">Accéder</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 UMMTO Portail Étudiant. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="portal.js"></script>
+</body>
+</html>

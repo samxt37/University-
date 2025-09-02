@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier des Événements - UMMTO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="UMMTO Logo">
+                <h1>Calendrier des Événements</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="#calendar">Calendrier</a></li>
+                    <li><a href="#events">Événements</a></li>
+                    <li><a href="#add-event">Ajouter un événement</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="calendar" class="calendar-section">
+                <h2>Calendrier</h2>
+                <div class="calendar-header">
+                    <button id="prev-month" class="btn-secondary">❮ Précédent</button>
+                    <h3 id="current-month">Octobre 2025</h3>
+                    <button id="next-month" class="btn-secondary">Suivant ❯</button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="day-header">Dim</div>
+                    <div class="day-header">Lun</div>
+                    <div class="day-header">Mar</div>
+                    <div class="day-header">Mer</div>
+                    <div class="day-header">Jeu</div>
+                    <div class="day-header">Ven</div>
+                    <div class="day-header">Sam</div>
+                    <!-- Calendar days will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <section id="events" class="events-section">
+                <h2>Événements à venir</h2>
+                <div class="events-list">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Oct</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Conférence sur l'Intelligence Artificielle</h3>
+                            <p class="event-time">14:00 - 17:00</p>
+                            <p class="event-location">Amphithéâtre A</p>
+                            <p class="event-description">Une conférence sur les dernières avancées en IA.</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">Oct</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Journée portes ouvertes</h3>
+                            <p class="event-time">09:00 - 16:00</p>
+                            <p class="event-location">Campus principal</p>
+                            <p class="event-description">Découvrez notre université et nos formations.</p>
+                        </div>
+                    </div>
+                    <!-- More events -->
+                </div>
+            </section>
+
+            <section id="add-event" class="add-event-section">
+                <h2>Ajouter un événement</h2>
+                <form id="event-form">
+                    <div class="form-group">
+                        <label for="event-title">Titre de l'événement:</label>
+                        <input type="text" id="event-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-date">Date:</label>
+                        <input type="date" id="event-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-time">Heure:</label>
+                        <input type="time" id="event-time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-location">Lieu:</label>
+                        <input type="text" id="event-location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-description">Description:</label>
+                        <textarea id="event-description" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Ajouter l'événement</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 UMMTO Calendrier. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html>

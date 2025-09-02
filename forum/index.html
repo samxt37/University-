@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Étudiant - UMMTO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="UMMTO Logo">
+                <h1>Forum Étudiant</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="#categories">Catégories</a></li>
+                    <li><a href="#recent">Récent</a></li>
+                    <li><a href="#my-posts">Mes posts</a></li>
+                    <li><a href="#profile">Profil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="forum-header">
+                <div class="forum-stats">
+                    <div class="stat">
+                        <span class="number">2,547</span>
+                        <span class="label">Messages</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">387</span>
+                        <span class="label">Sujets</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">156</span>
+                        <span class="label">Membres</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">23</span>
+                        <span class="label">En ligne</span>
+                    </div>
+                </div>
+                <div class="forum-actions">
+                    <button id="new-topic" class="btn-primary">Nouveau sujet</button>
+                    <div class="search-box">
+                        <input type="text" id="forum-search" placeholder="Rechercher...">
+                        <button id="search-btn">🔍</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="categories" class="categories-section">
+                <h2>Catégories</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="academic">
+                        <div class="category-icon">📚</div>
+                        <div class="category-info">
+                            <h3>Cours et études</h3>
+                            <p>Questions sur les cours, examens, projets</p>
+                            <div class="category-stats">
+                                <span>145 sujets</span>
+                                <span>892 messages</span>
+                            </div>
+                        </div>
+                        <div class="category-latest">
+                            <p>Dernier message: "Aide maths analyse"</p>
+                            <span>il y a 2h</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="campus">
+                        <div class="category-icon">🏛️</div>
+                        <div class="category-info">
+                            <h3>Vie de campus</h3>
+                            <p>Résidences, restaurants, activités</p>
+                            <div class="category-stats">
+                                <span>98 sujets</span>
+                                <span>567 messages</span>
+                            </div>
+                        </div>
+                        <div class="category-latest">
+                            <p>Dernier message: "Tournoi foot"</p>
+                            <span>il y a 5h</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="career">
+                        <div class="category-icon">💼</div>
+                        <div class="category-info">
+                            <h3>Carrière et stages</h3>
+                            <p>Emploi, stages, orientation professionnelle</p>
+                            <div class="category-stats">
+                                <span>76 sujets</span>
+                                <span>423 messages</span>
+                            </div>
+                        </div>
+                        <div class="category-latest">
+                            <p>Dernier message: "Stage en entreprise"</p>
+                            <span>il y a 1j</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="tech">
+                        <div class="category-icon">💻</div>
+                        <div class="category-info">
+                            <h3>Technologie et informatique</h3>
+                            <p>Logiciels, programmation, matériel</p>
+                            <div class="category-stats">
+                                <span>68 sujets</span>
+                                <span>345 messages</span>
+                            </div>
+                        </div>
+                        <div class="category-latest">
+                            <p>Dernier message: "Problème ordinateur"</p>
+                            <span>il y a 3h</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="general">
+                        <div class="category-icon">💬</div>
+                        <div class="category-info">
+                            <h3>Discussion générale</h3>
+                            <p>Sujets variés, échanges entre étudiants</p>
+                            <div class="category-stats">
+                                <span>234 sujets</span>
+                                <span>1,234 messages</span>
+                            </div>
+                        </div>
+                        <div class="category-latest">
+                            <p>Dernier message: "Soirée étudiante"</p>
+                            <span>il y a 1h</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="help">
+                        <div class="category-icon">🆘</div>
+                        <div class="category-info">
+                            <h3>Aide et support</h3>
+                            <p>Questions administratives, problèmes techniques</p>
+                            <div class="category-stats">
+                                <span>45 sujets</span>
+                                <span>156 messages</span>
+                            </div>
+                        </div>
+                        <div class="category-latest">
+                            <p>Dernier message: "Problème inscription"</p>
+                            <span>il y a 6h</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recent-topics" class="recent-section">
+                <h2>Sujets récents</h2>
+                <div class="topics-list">
+                    <div class="topic-item">
+                        <div class="topic-icon">📚</div>
+                        <div class="topic-content">
+                            <h3>Aide pour le projet de physique quantique</h3>
+                            <p>par <strong>Ahmed B.</strong> dans <span class="topic-category">Cours et études</span></p>
+                            <div class="topic-meta">
+                                <span>12 réponses</span>
+                                <span>89 vues</span>
+                                <span>il y a 30 min</span>
+                            </div>
+                        </div>
+                        <div class="topic-actions">
+                            <button class="btn-reply">Répondre</button>
+                        </div>
+                    </div>
+
+                    <div class="topic-item">
+                        <div class="topic-icon">🏛️</div>
+                        <div class="topic-content">
+                            <h3>Recherche colocataire pour l'année prochaine</h3>
+                            <p>par <strong>Fatma K.</strong> dans <span class="topic-category">Vie de campus</span></p>
+                            <div class="topic-meta">
+                                <span>8 réponses</span>
+                                <span>156 vues</span>
+                                <span>il y a 2h</span>
+                            </div>
+                        </div>
+                        <div class="topic-actions">
+                            <button class="btn-reply">Répondre</button>
+                        </div>
+                    </div>
+
+                    <div class="topic-item">
+                        <div class="topic-icon">💼</div>
+                        <div class="topic-content">
+                            <h3>Offre de stage en développement web</h3>
+                            <p>par <strong>Mohamed L.</strong> dans <span class="topic-category">Carrière et stages</span></p>
+                            <div class="topic-meta">
+                                <span>15 réponses</span>
+                                <span>234 vues</span>
+                                <span>il y a 4h</span>
+                            </div>
+                        </div>
+                        <div class="topic-actions">
+                            <button class="btn-reply">Répondre</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="online-users" class="online-section">
+                <h2>Membres en ligne</h2>
+                <div class="online-users">
+                    <div class="user-item">
+                        <div class="user-avatar">A</div>
+                        <span>Ahmed B.</span>
+                    </div>
+                    <div class="user-item">
+                        <div class="user-avatar">F</div>
+                        <span>Fatma K.</span>
+                    </div>
+                    <div class="user-item">
+                        <div class="user-avatar">M</div>
+                        <span>Mohamed L.</span>
+                    </div>
+                    <div class="user-item">
+                        <div class="user-avatar">S</div>
+                        <span>Sarah T.</span>
+                    </div>
+                    <div class="user-item">
+                        <div class="user-avatar">K</div>
+                        <span>Kamel R.</span>
+                    </div>
+                </div>
+                <p class="online-count">23 membres en ligne</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- New Topic Modal -->
+    <div id="new-topic-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Nouveau sujet</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="topic-form">
+                    <div class="form-group">
+                        <label for="topic-title">Titre du sujet:</label>
+                        <input type="text" id="topic-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic-category">Catégorie:</label>
+                        <select id="topic-category" required>
+                            <option value="">Choisir une catégorie</option>
+                            <option value="academic">Cours et études</option>
+                            <option value="campus">Vie de campus</option>
+                            <option value="career">Carrière et stages</option>
+                            <option value="tech">Technologie et informatique</option>
+                            <option value="general">Discussion générale</option>
+                            <option value="help">Aide et support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic-content">Message:</label>
+                        <textarea id="topic-content" rows="8" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="notify-replies">
+                            M'avertir des nouvelles réponses
+                        </label>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn-secondary" id="cancel-topic">Annuler</button>
+                        <button type="submit" class="btn-primary">Publier</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 UMMTO - Forum Étudiant. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="forum.js"></script>
+</body>
+</html>
